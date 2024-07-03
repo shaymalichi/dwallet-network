@@ -118,7 +118,7 @@ pub fn sui_state_proof_verify_committee(
  * Implementation of the Move native function `sui_state_proof::sui_state_proof_verify_link_cap(committee: vector<u8>, checkpoint_summary: vector<u8>, checkpoint_contents: vector<u8>, transaction: vector<u8>,  event_type_layout: vector<u8>,  package_id: vector<u8>): (vector<u8>, vector<u8>);`
  *   gas cost: sui_state_proof_verify_link_cap_base   | base cost for function call and fixed opers
  **************************************************************************************************/
-
+/// Verifies and fetches SUI and dWallet cap objects.
 pub fn sui_state_proof_verify_link_cap(
     context: &mut NativeContext,
     ty_args: Vec<Type>,
@@ -251,7 +251,7 @@ pub fn sui_state_proof_verify_link_cap(
  * Implementation of the Move native function `dwallet_2pc_mpc_ecdsa_k1::sui_state_proof_verify_transaction(committee: vector<u8>, checkpoint_summary: vector<u8>, checkpoint_contents: vector<u8>, transaction: vector<u8>,  event_type_layout: vector<u8>,  package_id: vector<u8>): (vector<u8>, vector<u8>);`
  *   gas cost: sui_state_proof_verify_transaction_base   | base cost for function call and fixed opers
  **************************************************************************************************/
-
+/// Verifies a transaction
 pub fn sui_state_proof_verify_transaction(
     context: &mut NativeContext,
     ty_args: Vec<Type>,
